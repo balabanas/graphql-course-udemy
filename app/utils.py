@@ -29,7 +29,7 @@ def hash_password(pwd: str) -> str:
     return ph.hash(pwd)
 
 
-def verify_password(pwd_hash: str, pwd: str) -> [None | GraphQLError]:
+def verify_password(pwd_hash: str, pwd: str):
     ph = PasswordHasher()
     try:
         ph.verify(pwd_hash, pwd)
